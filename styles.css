@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,8 +9,12 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Smooch Sans', Arial, Helvetica, sans-serif;
 }
 
 #header-img {
@@ -24,7 +32,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: azure;
+    background-color: white;
 }
 
 .nav-links {
@@ -35,8 +43,14 @@ body {
 .nav-links a {
     text-decoration: none;
     padding: 0 20px;
-    color: #333;
-    font-size: 1.2rem;
+    color: black;
+    font-size: 28px;
+    font-family: 'Smooch Sans', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.nav-links a:hover {
+    top: -3px;
 }
 
 main {
@@ -48,6 +62,7 @@ main {
 .page-top h1 {
     text-align: center;
     margin-bottom: 10px;
+    font-size: 46px;
 }
 
 .page-top form {
@@ -59,23 +74,215 @@ main {
 
 #email {
     width: 250px;
-    height: 30px;
+    height: 40px;
     padding: 5px 8px;
     margin-bottom: 10px;
-    border: 0;
+    border: 2px solid #04EEFE;
     border-radius: 10px;
+    background-color: #ffffff;
 }
 
 #submit {
     padding: 5px;
-    background-color: #5FBDFF;
+    background: linear-gradient(#04EEFE, #4EADFE);
     border: 0;
+    height: 30px;
     width: 60px;
-    border-radius: 25px;
+    border-radius: 5px;
+    font-family: 'Smooch Sans', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 #submit:hover {
     cursor: pointer;
-    background-color: #22a3ff;
-    color: white;
+    background: linear-gradient(#4EADFE, #04EEFE);
+}
+
+.features {
+    text-align: left;
+    max-width: 80%;
+    margin: 40px auto;
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+}
+
+.feature img {
+    margin-right: 40px;
+    width: 64px;
+    height: 64px;
+}
+
+.feature h2 {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.games h2 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 42px;
+}
+
+iframe {
+    display: block;
+    margin: 40px auto;
+}
+
+span h2 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 42px;    
+}
+
+.membership {
+    max-width: 800px;
+    padding: 20px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.standard, .gold, .premium {
+    border: 2px solid #333;
+    border-radius: 5px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 3px 10px 10px #888888
+}
+
+.type {
+    text-align: center;
+    background-color: #bae2ff;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.membership ul {
+    margin: 5px 15px;
+    list-style: none;
+    text-align: left;
+}
+
+.membership h3 {
+    font-size: 38px;
+    text-align: center;
+    margin: 5px auto;
+}
+
+button {
+    font-size: 900;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    border: 0;
+    border-radius: 2px;
+    background: linear-gradient(#04EEFE, #4EADFE);
+    color: black;
+    height: 35px;
+    width: 100px;
+    font-family: 'Smooch Sans', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(#4EADFE, #04EEFE)
+}
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 5px;
+    background-color: #5FBDFF;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+footer li {
+    padding: 0 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+footer a:hover {
+    top: -3px;
+}
+
+
+@media only screen and (max-width: 840px) {
+    .membership {
+        display: grid;
+        grid-template-columns: repeat(1, 270px);
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .feature img {
+        margin-top: 12px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .feature img {
+        margin-top: 28px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+    
+    footer ul {
+        justify-content: space-around;
+        margin-bottom: 5px;
+    }
+    span {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #nav-bar {
+        flex-direction: row;
+    }
+
+    #header-img {
+        margin-bottom: 0;
+    }
+
+    main {
+        margin-top: 79px;
+    }
+
+    iframe {
+        width: 700px;
+        height: 375px;
+    }
+
+    #features {
+        width: 50%;
+    }
 }
