@@ -13,6 +13,14 @@ body {
     font-size: 16px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    scroll-margin-top: 120px;
+}
+
 h1, h2, h3 {
     font-family: 'Smooch Sans', Arial, Helvetica, sans-serif;
 }
@@ -123,15 +131,35 @@ main {
     margin-bottom: 5px;
 }
 
-.games h2 {
+.game-section-quote {
     margin: 20px 0;
     text-align: center;
     font-size: 42px;
 }
 
-iframe {
-    display: block;
-    margin: 40px auto;
+.games {
+    margin-bottom: 40px;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    margin: 0 auto;
+}
+
+.game img {
+    object-fit: contain;
+}
+
+.game {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #bae2ff;
+    margin: 20px auto;
+    box-shadow: 5px 5px 10px #aaaaaa;
 }
 
 span h2 {
@@ -157,7 +185,7 @@ span h2 {
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    box-shadow: 3px 10px 10px #888888
+    box-shadow: 3px 10px 10px #888888;
 }
 
 .type {
@@ -231,6 +259,28 @@ footer a:hover {
     top: -3px;
 }
 
+.creds {
+    padding: 5px 0;
+    text-align: center;
+    background-color: lightgray;
+    color: #333;
+    font-size: 1.4rem;
+    font-family: 'Smooch Sans', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.creds a {
+    text-decoration: none;
+    color: #333;
+    color: #0088ff;
+}
+
+.creds a:hover {
+    padding: 2px;
+    color: white;
+    background-color: #4EADFE;
+}
+
 
 @media only screen and (max-width: 840px) {
     .membership {
@@ -277,12 +327,16 @@ footer a:hover {
         margin-top: 79px;
     }
 
-    iframe {
-        width: 700px;
-        height: 375px;
-    }
-
     #features {
         width: 50%;
     }
+
+    .games {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature img {
+        margin-top: 10px;
+    }
+
 }
